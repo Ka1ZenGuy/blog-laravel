@@ -8,7 +8,14 @@
         <input type="text" name="excerpt" id="excerpt">
 
         <label for="category_id">Categoria</label>
-        <input type="number" name="category_id" id="category">
+        <select name="category_id" id="category_id">
+            <option>--Selecciona una categoría--</option>
+            @foreach ( $categories as $category )
+
+            <option value="{{category->id}}">{{$category->name}}</option>
+            @endforeach
+        </select>
+        <!--<input type="number" name="category_id" id="category">-->>
 
         <label for="content">Contenido</label>
         <textarea name="content" id="content" cols="30" rows="10"></textarea>

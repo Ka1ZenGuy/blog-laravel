@@ -26,16 +26,14 @@
 
        <x-menu>
 
-            {{}}
+
        </x-menu>
 
 
         <!-- Main -->
         <div id="main">
             <div class="inner">
-                {{ @slot('')
-
-                @endslot}}
+                {{ $slot}}
             </div>
         </div>
 
