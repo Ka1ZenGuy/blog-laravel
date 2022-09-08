@@ -20,6 +20,7 @@ return new class extends Migration
             $table->foreignId('category_id');
             $table->text('content');
             $table->text('excerpt');
+            $table->integer('style');
             $table->timestamps();
 
         });

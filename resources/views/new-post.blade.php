@@ -1,37 +1,35 @@
 <x-layout>
-    <form action="/new-post" method="post">
-        @csrf <!-- Marca de agua que sirve para comprobar si es el document0-->
-        <label for="title">Titulo</label>
-        <input type="text" name="title" id="title">
+<form action="/new-post" method="post">
+    @csrf
+    <label for="title">Título</label>
+    <input type="text" name="title" id="title">
 
-        <label for="excerpt">Extracto</label>
-        <input type="text" name="excerpt" id="excerpt">
+    <label for="excerpt">Extracto</label>
+    <input type="text" name="excerpt" id="excerpt">
 
-        <label for="category_id">Categoria</label>
-        <select name="category_id" id="category_id">
-            <option>--Selecciona una categoría--</option>
-            @foreach ( $categories as $category )
+    <label for="category_id">Categoría</label>
+    {{-- <input type="number" name="category_id" id="category_id"> --}}
 
-            <option value="{{category->id}}">{{$category->name}}</option>
-            @endforeach
-        </select>
-        <!--<input type="number" name="category_id" id="category">-->>
+    <select name="category_id" id="category_id">
+        <option>-- Selecciona una categoría --</option>
+        @foreach ( $categories as $category)
+            <option value="{{$category->id}}">{{$category->name}}</option>
+        @endforeach
 
-        <label for="content">Contenido</label>
-        <textarea name="content" id="content" cols="30" rows="10"></textarea>
 
-        <input type="submit" value="Publicar">
-    </form>
+    </select>
+    <label for="style">Estilo</label>
+    <select name="style" id="style">
+        @foreach ([1,2,3,4,5,6] as $style )
+        <option value="{{style}}">Estilo {{$style}}</option>
+
+        @endforeach
+
+    </select>
+
+    <label for="content">Contenido</label>
+    <textarea name="content" id="content"></textarea>
+
+    <input type="submit" value="Publicar">
+</form>
 </x-layout>
-
-<x-header />
-
-<x-menu>
-    <form action="" method="get">
-
-    </form>
-</x-menu>
-
-<x-footer>
-
-</x-footer>

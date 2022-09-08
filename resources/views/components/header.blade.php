@@ -1,9 +1,10 @@
+<!-- Header -->
 <header id="header">
     <div class="inner">
 
         <!-- Logo -->
-        <a href="index.html" class="logo">
-            <span class="symbol"><img src="images/logo.svg" alt="" /></span><span
+        <a href="/" class="logo">
+            <span class="symbol"><img src="/images/logo.svg" alt="" /></span><span
                 class="title">Phantom</span>
         </a>
 
